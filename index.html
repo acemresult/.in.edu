@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Result Portal</title>
+<link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+<div class="container" id="formContainer">
+<h2>Result Portal</h2>
+<label for="roll">Roll Number</label>
+<input type="text" id="roll" placeholder="Enter Roll Number" />
+<label for="semester">Semester</label>
+<select id="semester">
+<option value="">--Select--</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+<label for="admission">Admission Number</label>
+<input type="text" id="admission" placeholder="Enter Admission Number" />
+<button onclick="viewResult()">View Result</button>
+<div class="note">
+**The results displayed are subject to Updation/Correction.<br></bt>The final result will be on DMC.
+</div>
+</div>
+<!-- Message screen for invalid admission number -->
+<div class="message-box" id="invalidBox" style="display:none;">
+<h3>Invalid Admission Number</h3>
+<p>Please try again with correct details.</p>
+<a href="#" class="back-btn" onclick="goBack()">Go Back</a>
+</div>
+<!-- Result screen -->
+<div class="container result-screen" id="resultContainer" style="display:none;">
+<div id="resultContent"></div>
+</div>
+<script src="script.js"></script> <!-- Link to external JS -->
+</body>
+</html>
